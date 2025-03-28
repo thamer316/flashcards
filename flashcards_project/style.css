@@ -1,7 +1,4 @@
-html {
-  overflow: hidden; /* منع التمرير من الجذر */
-  height: 100%;
-}
+
 
 body {
   font-family: 'Arial', sans-serif;
