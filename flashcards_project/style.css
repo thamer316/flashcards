@@ -1,4 +1,4 @@
-/* الخط العام */
+
 body {
   font-family: 'Arial', sans-serif;
   background-color: #f5f7fa;
@@ -53,18 +53,18 @@ body {
   background-color: #e0f7fa;
   transform: rotateY(180deg);
 }
+.buttons-placeholder {
+  height: 70px;
+}
 .buttons {
-  visibility: hidden;
-  height: 60px;
-  display: flex;
+  display: none;
   flex-wrap: wrap;
   justify-content: center;
   gap: 12px;
   margin-top: 10px;
-  transition: visibility 0.2s ease;
 }
 .buttons.visible {
-  visibility: visible;
+  display: flex;
 }
 button {
   padding: 10px 16px;
