@@ -39,11 +39,10 @@ body {
   height: 100%;
   backface-visibility: hidden;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  justify-content: space-between;  /* توزيع المساحة بين الأعلى والأسفل */
+  flex-direction: column;
   font-size: 28px;
   padding: 28px;
-  flex-direction: column;
   box-sizing: border-box;
 }
 .card .front {
