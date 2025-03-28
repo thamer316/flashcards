@@ -77,15 +77,18 @@ body {
   margin-top: 10px;
 }
 
-button {
-  padding: 10px 16px;
-  font-size: 16px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  min-width: 120px;
-  text-align: center;
-  box-sizing: border-box;
+.buttons {
+  visibility: hidden;           /* ← تخفي الأزرار فقط */
+  height: 60px;                 /* ← حجز ارتفاع ثابت */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 10px;
+  transition: visibility 0.2s;
+}
+.buttons.visible {
+  visibility: visible;          /* ← نُظهرها عند الحاجة */
 }
 
 .correct {
