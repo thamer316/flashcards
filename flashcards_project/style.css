@@ -53,18 +53,10 @@ body {
   background-color: #e0f7fa;
   transform: rotateY(180deg);
 }
-.buttons-placeholder {
-  height: 70px;
-}
-.buttons {
-  display: none;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 12px;
-  margin-top: 10px;
-}
-.buttons.visible {
+.buttons-inline {
+  margin-top: 20px;
   display: flex;
+  gap: 10px;
 }
 button {
   padding: 10px 16px;
@@ -94,19 +86,4 @@ img {
   max-width: 100%;
   height: auto;
   margin-bottom: 10px;
-}
-@media (max-width: 400px) {
-  .card-container {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 3 / 2;
-  }
-  button {
-    font-size: 14px;
-    min-width: 100px;
-  }
-  .card .front, .card .back {
-    font-size: 24px;
-    padding: 18px;
-  }
 }
