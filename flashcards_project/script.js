@@ -116,3 +116,4 @@ window.onload = () => {
   shuffle(cards);
   showCard();
 };
+ 
