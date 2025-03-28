@@ -10,6 +10,7 @@ body {
   margin: 0;
   padding: 20px;
   box-sizing: border-box;
+  overflow: hidden; /* إضافة هذا لمنع التمرير */
 }
 .card-container {
   perspective: 1000px;
