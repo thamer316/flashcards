@@ -13,13 +13,14 @@ body {
   box-sizing: border-box;
 }
 
+
 /* حاوية البطاقة */
 .card-container {
   perspective: 1000px;
   width: 90%;
   max-width: 600px;
-  aspect-ratio: 3 / 2;
-  margin-bottom: 20px;
+  height: 380px; /* ← بدلاً من aspect-ratio */
+  margin-bottom: 40px; /* ← مساحة للأزرار */
 }
 
 /* البطاقة */
