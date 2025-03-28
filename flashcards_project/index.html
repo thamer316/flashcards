@@ -10,16 +10,16 @@
   <div class="card-container" onclick="flipCard()">
     <div class="card" id="card">
       <div class="front" id="question"></div>
-      <div class="back" id="answer"></div>
+      <div class="back" id="answer">
+        <div id="answerText"></div>
+        <div class="buttons-inline">
+          <button onclick="markCorrect(event)" class="correct">✅ كنت أعرفها</button>
+          <button onclick="markWrong(event)" class="wrong">❌ أخطأت</button>
+        </div>
+      </div>
     </div>
-  </div>
-  <div class="buttons-placeholder"></div>
-  <div class="buttons">
-    <button onclick="markCorrect()" class="correct">✅ كنت أعرفها</button>
-    <button onclick="markWrong()" class="wrong">❌ أخطأت</button>
   </div>
   <div class="result" id="result"></div>
   <script src="script.js"></script>
 </body>
 </html>
- 
