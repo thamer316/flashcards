@@ -10,14 +10,6 @@ let wrong = 0;
 let flipped = false;
 let startTime = null;
 
-const perfectMessages = [
-  "🎉 مذهل! لم تُخطئ بأي بطاقة! هذا هو الإتقان الحقيقي!",
-  "🏅 أداء خارق! كل إجاباتك صحيحة. استمر نحو القمة!",
-  "🌟 ممتاز جدًا! لا يوجد ما يُقال سوى: 👏👏👏",
-  "🔥 عقلك في أفضل حالاته! لا خطأ واحد يُذكر!",
-  "💎 إتقان كامل! هنيئًا لك هذا المستوى الرائع!"
-];
-
 function shuffle(array) {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -34,6 +26,7 @@ function showCard() {
   q.textContent = card.question;
   a.textContent = card.answer;
   document.getElementById("card").classList.remove("flipped");
+  document.getElementById("buttonsContainer").style.display = "none";
   flipped = false;
   if (!startTime) startTime = new Date();
 }
@@ -42,6 +35,7 @@ function flipCard() {
   if (!flipped) {
     flipped = true;
     document.getElementById("card").classList.add("flipped");
+    document.getElementById("buttonsContainer").style.display = "flex";
   }
 }
 
@@ -72,22 +66,19 @@ function nextCard() {
     const score = Math.round((correct / total) * 100);
     let message = "";
     if (score === 100) {
-      const randomIndex = Math.floor(Math.random() * perfectMessages.length);
-      message = perfectMessages[randomIndex];
+      message = "🎉 مذهل! لم تُخطئ بأي بطاقة!";
       confetti({ particleCount: 150, spread: 100, origin: { y: 0.6 } });
     } else if (score >= 90) {
-      message = `🌟 ممتاز جدًا! إتقانك ${score}٪، تابع التألق!`;
+      message = `🌟 ممتاز جدًا! إتقانك ${score}٪`;
     } else if (score >= 75) {
-      message = `👍 أداء جيد! إتقانك ${score}٪، يمكنك التحسن أكثر.`;
-    } else if (score >= 60) {
-      message = `💪 ما زلت بحاجة إلى مراجعة، حاول مجددًا!`;
+      message = `👍 جيد! إتقانك ${score}٪`;
     } else {
-      message = `🧐 تحتاج لتكرار التمرين، لا تستسلم!`;
+      message = `🧐 تحتاج للمراجعة!`;
     }
     document.getElementById("result").innerHTML = `
       <h2>${message}</h2>
-      <p>⏱️ الوقت المستغرق: ${timeString}</p>
-      <button onclick="restart()" style="margin-top: 10px; font-size: 16px;">🔁 أعد التمرين</button>
+      <p>⏱️ الوقت: ${timeString}</p>
+      <button onclick="restart()" style="margin-top: 10px;">🔁 أعد التمرين</button>
     `;
     document.querySelector(".card-container").style.display = "none";
   } else {
@@ -116,4 +107,3 @@ window.onload = () => {
   shuffle(cards);
   showCard();
 };
- 
