@@ -47,8 +47,8 @@ function showCard() {
 function flipCard() {
   flipped = !flipped;
   document.getElementById("card").classList.toggle("flipped", flipped);
-  document.querySelector(".buttons").style.display = flipped ? "flex" : "none";
-}
+  document.querySelector(".buttons").classList.toggle("visible", flipped);
+
 
 function markCorrect() {
   cards.splice(current, 1);
