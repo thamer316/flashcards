@@ -29,28 +29,30 @@ function shuffle(array) {
 function showCard() {
   if (cards.length === 0) return;
   const q = document.getElementById("question");
-  const a = document.getElementById("answer");
+  const a = document.getElementById("answerText");
   const card = cards[current];
   q.textContent = card.question;
   a.textContent = card.answer;
   document.getElementById("card").classList.remove("flipped");
-  document.querySelector(".buttons").classList.remove("visible");
   flipped = false;
   if (!startTime) startTime = new Date();
 }
 
 function flipCard() {
-  flipped = !flipped;
-  document.getElementById("card").classList.toggle("flipped", flipped);
-  document.querySelector(".buttons").classList.toggle("visible", flipped);
+  if (!flipped) {
+    flipped = true;
+    document.getElementById("card").classList.add("flipped");
+  }
 }
 
-function markCorrect() {
+function markCorrect(event) {
+  event.stopPropagation();
   cards.splice(current, 1);
   nextCard();
 }
 
-function markWrong() {
+function markWrong(event) {
+  event.stopPropagation();
   const wrongCard = cards[current];
   cards.splice(current, 1);
   cards.push(wrongCard);
@@ -73,13 +75,6 @@ function nextCard() {
       const randomIndex = Math.floor(Math.random() * perfectMessages.length);
       message = perfectMessages[randomIndex];
       confetti({ particleCount: 150, spread: 100, origin: { y: 0.6 } });
-      setTimeout(() => {
-        confetti({
-          particleCount: 30, angle: 90, spread: 70, startVelocity: 40,
-          origin: { y: 1 }, shapes: ['circle'],
-          colors: ['#ff0000', '#00ccff', '#ffaa00', '#66ff66'], scalar: 2
-        });
-      }, 800);
     } else if (score >= 90) {
       message = `🌟 ممتاز جدًا! إتقانك ${score}٪، تابع التألق!`;
     } else if (score >= 75) {
@@ -95,7 +90,6 @@ function nextCard() {
       <button onclick="restart()" style="margin-top: 10px; font-size: 16px;">🔁 أعد التمرين</button>
     `;
     document.querySelector(".card-container").style.display = "none";
-    document.querySelector(".buttons").classList.remove("visible");
   } else {
     if (current >= cards.length) current = 0;
     showCard();
@@ -114,7 +108,6 @@ function restart() {
   flipped = false;
   startTime = null;
   document.querySelector(".card-container").style.display = "block";
-  document.querySelector(".buttons").classList.remove("visible");
   document.getElementById("result").innerHTML = "";
   showCard();
 }
