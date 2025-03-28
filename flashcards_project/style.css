@@ -13,14 +13,13 @@ body {
   box-sizing: border-box;
 }
 
-
 /* حاوية البطاقة */
 .card-container {
   perspective: 1000px;
   width: 90%;
   max-width: 600px;
-  height: 380px; /* ← بدلاً من aspect-ratio */
-  margin-bottom: 40px; /* ← مساحة للأزرار */
+  aspect-ratio: 3 / 2;
+  margin-bottom: 20px;
 }
 
 /* البطاقة */
@@ -70,25 +69,28 @@ body {
 
 /* الأزرار */
 .buttons {
+  visibility: hidden;
+  height: 60px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 12px;
   margin-top: 10px;
-}
-
-.buttons {
-  visibility: hidden;           /* ← تخفي الأزرار فقط */
-  height: 60px;                 /* ← حجز ارتفاع ثابت */
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 12px;
-  margin-top: 10px;
-  transition: visibility 0.2s;
+  transition: visibility 0.2s ease;
 }
 .buttons.visible {
-  visibility: visible;          /* ← نُظهرها عند الحاجة */
+  visibility: visible;
+}
+
+button {
+  padding: 10px 16px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  min-width: 120px;
+  text-align: center;
+  box-sizing: border-box;
 }
 
 .correct {
