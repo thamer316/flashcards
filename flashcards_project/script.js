@@ -81,6 +81,7 @@ function nextCard() {
       <button onclick="restart()" style="margin-top: 10px;">🔁 أعد التمرين</button>
     `;
     document.querySelector(".card-container").style.display = "none";
+    document.getElementById("buttonsContainer").style.display = "none";
   } else {
     if (current >= cards.length) current = 0;
     showCard();
@@ -100,6 +101,7 @@ function restart() {
   startTime = null;
   document.querySelector(".card-container").style.display = "block";
   document.getElementById("result").innerHTML = "";
+  document.getElementById("buttonsContainer").style.display = "none";
   showCard();
 }
 
