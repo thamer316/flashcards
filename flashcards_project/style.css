@@ -15,8 +15,9 @@ body {
 /* حاوية البطاقة */
 .card-container {
   perspective: 1000px;
-  width: 320px;
-  height: 220px;
+  width: 100%;
+  max-width: 600px;
+  height: 320px;
   margin-bottom: 20px;
 }
 
