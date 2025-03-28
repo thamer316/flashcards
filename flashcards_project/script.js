@@ -1,112 +1,125 @@
-/* الخط العام */
-body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f5f7fa;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  margin: 0;
-  padding: 20px;
-  box-sizing: border-box;
-}
-.card-container {
-  perspective: 1000px;
-  width: 90%;
-  max-width: 600px;
-  aspect-ratio: 3 / 2;
-  margin-bottom: 20px;
-}
-.card {
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  border-radius: 16px;
-  background: #fff;
-  transition: transform 0.6s;
-  transform-style: preserve-3d;
-  box-shadow: 0 12px 24px rgba(0,0,0,0.3);
-  position: relative;
-}
-.card.flipped {
-  transform: rotateY(180deg);
-}
-.card .front,
-.card .back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 28px;
-  padding: 28px;
-  flex-direction: column;
-  box-sizing: border-box;
-}
-.card .front {
-  background-color: #ffffff;
-}
-.card .back {
-  background-color: #e0f7fa;
-  transform: rotateY(180deg);
-}
-.buttons {
-  visibility: hidden;
-  height: 60px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 12px;
-  margin-top: 10px;
-  transition: visibility 0.2s ease;
-}
-.buttons.visible {
-  visibility: visible;
-}
-button {
-  padding: 10px 16px;
-  font-size: 16px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  min-width: 120px;
-  text-align: center;
-  box-sizing: border-box;
-}
-.correct {
-  background-color: #28a745;
-  color: white;
-}
-.wrong {
-  background-color: #dc3545;
-  color: white;
-}
-.result {
-  margin-top: 20px;
-  font-size: 18px;
-  text-align: center;
-  color: #333;
-}
-img {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 10px;
-}
-@media (max-width: 400px) {
-  .card-container {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 3 / 2;
+
+let cards = [
+  { question: "ما الصيغة الجزيئية للميثان؟", answer: "CH₄" },
+  { question: "ما الصيغة الجزيئية للإيثان؟", answer: "C₂H₆" },
+  { question: "ما الصيغة الجزيئية للبروبان؟", answer: "C₃H₈" }
+];
+
+let current = 0;
+let wrong = 0;
+let flipped = false;
+let startTime = null;
+
+const perfectMessages = [
+  "🎉 مذهل! لم تُخطئ بأي بطاقة! هذا هو الإتقان الحقيقي!",
+  "🏅 أداء خارق! كل إجاباتك صحيحة. استمر نحو القمة!",
+  "🌟 ممتاز جدًا! لا يوجد ما يُقال سوى: 👏👏👏",
+  "🔥 عقلك في أفضل حالاته! لا خطأ واحد يُذكر!",
+  "💎 إتقان كامل! هنيئًا لك هذا المستوى الرائع!"
+];
+
+function shuffle(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
   }
-  button {
-    font-size: 14px;
-    min-width: 100px;
-  }
-  .card .front, .card .back {
-    font-size: 24px;
-    padding: 18px;
+  return array;
+}
+
+function showCard() {
+  if (cards.length === 0) return;
+  const q = document.getElementById("question");
+  const a = document.getElementById("answer");
+  const card = cards[current];
+  q.textContent = card.question;
+  a.textContent = card.answer;
+  document.getElementById("card").classList.remove("flipped");
+  document.querySelector(".buttons").classList.remove("visible");
+  flipped = false;
+  if (!startTime) startTime = new Date();
+}
+
+function flipCard() {
+  flipped = !flipped;
+  document.getElementById("card").classList.toggle("flipped", flipped);
+  document.querySelector(".buttons").classList.toggle("visible", flipped);
+}
+
+function markCorrect() {
+  cards.splice(current, 1);
+  nextCard();
+}
+
+function markWrong() {
+  const wrongCard = cards[current];
+  cards.splice(current, 1);
+  cards.push(wrongCard);
+  wrong++;
+  nextCard();
+}
+
+function nextCard() {
+  if (cards.length === 0) {
+    const endTime = new Date();
+    const timeSpent = Math.floor((endTime - startTime) / 1000);
+    const minutes = Math.floor(timeSpent / 60);
+    const seconds = timeSpent % 60;
+    const timeString = `${minutes > 0 ? minutes + " دقيقة و " : ""}${seconds} ثانية`;
+    const correct = 3 - wrong;
+    const total = correct + wrong;
+    const score = Math.round((correct / total) * 100);
+    let message = "";
+    if (score === 100) {
+      const randomIndex = Math.floor(Math.random() * perfectMessages.length);
+      message = perfectMessages[randomIndex];
+      confetti({ particleCount: 150, spread: 100, origin: { y: 0.6 } });
+      setTimeout(() => {
+        confetti({
+          particleCount: 30, angle: 90, spread: 70, startVelocity: 40,
+          origin: { y: 1 }, shapes: ['circle'],
+          colors: ['#ff0000', '#00ccff', '#ffaa00', '#66ff66'], scalar: 2
+        });
+      }, 800);
+    } else if (score >= 90) {
+      message = `🌟 ممتاز جدًا! إتقانك ${score}٪، تابع التألق!`;
+    } else if (score >= 75) {
+      message = `👍 أداء جيد! إتقانك ${score}٪، يمكنك التحسن أكثر.`;
+    } else if (score >= 60) {
+      message = `💪 ما زلت بحاجة إلى مراجعة، حاول مجددًا!`;
+    } else {
+      message = `🧐 تحتاج لتكرار التمرين، لا تستسلم!`;
+    }
+    document.getElementById("result").innerHTML = `
+      <h2>${message}</h2>
+      <p>⏱️ الوقت المستغرق: ${timeString}</p>
+      <button onclick="restart()" style="margin-top: 10px; font-size: 16px;">🔁 أعد التمرين</button>
+    `;
+    document.querySelector(".card-container").style.display = "none";
+    document.querySelector(".buttons").classList.remove("visible");
+  } else {
+    if (current >= cards.length) current = 0;
+    showCard();
   }
 }
+
+function restart() {
+  cards = [
+    { question: "ما الصيغة الجزيئية للميثان؟", answer: "CH₄" },
+    { question: "ما الصيغة الجزيئية للإيثان؟", answer: "C₂H₆" },
+    { question: "ما الصيغة الجزيئية للبروبان؟", answer: "C₃H₈" }
+  ];
+  shuffle(cards);
+  current = 0;
+  wrong = 0;
+  flipped = false;
+  startTime = null;
+  document.querySelector(".card-container").style.display = "block";
+  document.querySelector(".buttons").classList.remove("visible");
+  document.getElementById("result").innerHTML = "";
+  showCard();
+}
+
+window.onload = () => {
+  shuffle(cards);
+  showCard();
+};
