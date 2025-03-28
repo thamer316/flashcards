@@ -1,5 +1,4 @@
 
-
 body {
   font-family: 'Arial', sans-serif;
   background-color: #f5f7fa;
@@ -12,8 +11,6 @@ body {
   padding: 20px;
   box-sizing: border-box;
 }
-
-/* حاوية البطاقة */
 .card-container {
   perspective: 1000px;
   width: 90%;
@@ -21,8 +18,6 @@ body {
   aspect-ratio: 3 / 2;
   margin-bottom: 20px;
 }
-
-/* البطاقة */
 .card {
   width: 100%;
   height: 100%;
@@ -34,12 +29,9 @@ body {
   box-shadow: 0 12px 24px rgba(0,0,0,0.3);
   position: relative;
 }
-
 .card.flipped {
   transform: rotateY(180deg);
 }
-
-/* الوجه والظهر */
 .card .front,
 .card .back {
   position: absolute;
@@ -54,22 +46,16 @@ body {
   flex-direction: column;
   box-sizing: border-box;
 }
-
 .card .front {
   background-color: #ffffff;
 }
-
 .card .back {
   background-color: #e0f7fa;
   transform: rotateY(180deg);
 }
-
-/* حجز مساحة للأزرار */
 .buttons-placeholder {
   height: 70px;
 }
-
-/* الأزرار */
 .buttons {
   display: none;
   flex-wrap: wrap;
@@ -77,11 +63,9 @@ body {
   gap: 12px;
   margin-top: 10px;
 }
-
 .buttons.visible {
   display: flex;
 }
-
 button {
   padding: 10px 16px;
   font-size: 16px;
@@ -92,45 +76,35 @@ button {
   text-align: center;
   box-sizing: border-box;
 }
-
 .correct {
   background-color: #28a745;
   color: white;
 }
-
 .wrong {
   background-color: #dc3545;
   color: white;
 }
-
-/* النتيجة */
 .result {
   margin-top: 20px;
   font-size: 18px;
   text-align: center;
   color: #333;
 }
-
-/* الصور داخل البطاقات */
 img {
   max-width: 100%;
   height: auto;
   margin-bottom: 10px;
 }
-
-/* تجاوب في الشاشات الصغيرة */
 @media (max-width: 400px) {
   .card-container {
     width: 100%;
     height: auto;
     aspect-ratio: 3 / 2;
   }
-
   button {
     font-size: 14px;
     min-width: 100px;
   }
-
   .card .front, .card .back {
     font-size: 24px;
     padding: 18px;
