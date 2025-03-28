@@ -28,21 +28,15 @@ function shuffle(array) {
 
 function showCard() {
   if (cards.length === 0) return;
-
   const q = document.getElementById("question");
   const a = document.getElementById("answer");
   const card = cards[current];
-
   q.textContent = card.question;
   a.textContent = card.answer;
-
   document.getElementById("card").classList.remove("flipped");
   document.querySelector(".buttons").classList.remove("visible");
   flipped = false;
-
-  if (!startTime) {
-    startTime = new Date();
-  }
+  if (!startTime) startTime = new Date();
 }
 
 function flipCard() {
@@ -70,51 +64,36 @@ function nextCard() {
     const timeSpent = Math.floor((endTime - startTime) / 1000);
     const minutes = Math.floor(timeSpent / 60);
     const seconds = timeSpent % 60;
-    const timeString = \`\${minutes > 0 ? minutes + " دقيقة و " : ""}\${seconds} ثانية\`;
-
+    const timeString = `${minutes > 0 ? minutes + " دقيقة و " : ""}${seconds} ثانية`;
     const correct = 3 - wrong;
     const total = correct + wrong;
     const score = Math.round((correct / total) * 100);
     let message = "";
-
     if (score === 100) {
       const randomIndex = Math.floor(Math.random() * perfectMessages.length);
       message = perfectMessages[randomIndex];
-
-      confetti({
-        particleCount: 150,
-        spread: 100,
-        origin: { y: 0.6 }
-      });
-
+      confetti({ particleCount: 150, spread: 100, origin: { y: 0.6 } });
       setTimeout(() => {
         confetti({
-          particleCount: 30,
-          angle: 90,
-          spread: 70,
-          startVelocity: 40,
-          origin: { y: 1 },
-          shapes: ['circle'],
-          colors: ['#ff0000', '#00ccff', '#ffaa00', '#66ff66'],
-          scalar: 2
+          particleCount: 30, angle: 90, spread: 70, startVelocity: 40,
+          origin: { y: 1 }, shapes: ['circle'],
+          colors: ['#ff0000', '#00ccff', '#ffaa00', '#66ff66'], scalar: 2
         });
       }, 800);
     } else if (score >= 90) {
-      message = \`🌟 ممتاز جدًا! إتقانك \${score}٪، تابع التألق!\`;
+      message = `🌟 ممتاز جدًا! إتقانك ${score}٪، تابع التألق!`;
     } else if (score >= 75) {
-      message = \`👍 أداء جيد! إتقانك \${score}٪، يمكنك التحسن أكثر.\`;
+      message = `👍 أداء جيد! إتقانك ${score}٪، يمكنك التحسن أكثر.`;
     } else if (score >= 60) {
-      message = \`💪 ما زلت بحاجة إلى مراجعة، حاول مجددًا!\`;
+      message = `💪 ما زلت بحاجة إلى مراجعة، حاول مجددًا!`;
     } else {
-      message = \`🧐 تحتاج لتكرار التمرين، لا تستسلم!\`;
+      message = `🧐 تحتاج لتكرار التمرين، لا تستسلم!`;
     }
-
-    document.getElementById("result").innerHTML = \`
-      <h2>\${message}</h2>
-      <p>⏱️ الوقت المستغرق: \${timeString}</p>
+    document.getElementById("result").innerHTML = `
+      <h2>${message}</h2>
+      <p>⏱️ الوقت المستغرق: ${timeString}</p>
       <button onclick="restart()" style="margin-top: 10px; font-size: 16px;">🔁 أعد التمرين</button>
-    \`;
-
+    `;
     document.querySelector(".card-container").style.display = "none";
     document.querySelector(".buttons").classList.remove("visible");
   } else {
