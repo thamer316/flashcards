@@ -1,4 +1,7 @@
-
+html, body {
+  overflow: hidden;
+  height: 100%;
+}
 body {
   font-family: 'Arial', sans-serif;
   background-color: #f5f7fa;
@@ -10,7 +13,6 @@ body {
   margin: 0;
   padding: 20px;
   box-sizing: border-box;
-  overflow: hidden; /* إضافة هذا لمنع التمرير */
 }
 .card-container {
   perspective: 1000px;
