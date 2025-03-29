@@ -1,30 +1,29 @@
 
 let cards = [
-  { question: "ما الصيغة الجزيئية للميثان؟", answer: "CH₄" },
-  { question: "ما الصيغة الجزيئية للإيثان؟", answer: "C₂H₆" },
-  { question: "ما الصيغة الجزيئية للبروبان؟", answer: "C₃H₈" }
+  { question: { type: "text", content: "ما عاصمة الأردن؟" }, answer: { type: "text", content: "عمان" } },
+  { question: { type: "image", content: "images/1.png" }, answer: { type: "image", content: "images/1-.png" } },
+  { question: { type: "image", content: "images/2.png" }, answer: { type: "text", content: "الحموض الكربوكسيلية" } },
+  { question: { type: "text", content: "cos(2x) = " }, answer: { type: "image", content: "images/2-.png" } }
 ];
 
 let current = 0;
 let wrong = 0;
 let flipped = false;
 let startTime = null;
-
-function shuffle(array) {
-  for (let i = array.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[j]] = [array[j], array[i]];
-  }
-  return array;
-}
+const initialCardCount = cards.length;
 
 function showCard() {
-  if (cards.length === 0) return;
-  const q = document.getElementById("question");
-  const a = document.getElementById("answerText");
+  const qEl = document.getElementById("question");
+  const aEl = document.getElementById("answerText");
   const card = cards[current];
-  q.textContent = card.question;
-  a.textContent = card.answer;
+
+  qEl.innerHTML = card.question.type === "image"
+    ? `<img src='${card.question.content}' alt='سؤال'>`
+    : `<div>${card.question.content}</div>`;
+  aEl.innerHTML = card.answer.type === "image"
+    ? `<img src='${card.answer.content}' alt='إجابة'>`
+    : `<div>${card.answer.content}</div>`;
+
   document.getElementById("card").classList.remove("flipped");
   document.getElementById("buttonsContainer").style.display = "none";
   flipped = false;
@@ -32,26 +31,46 @@ function showCard() {
 }
 
 function flipCard() {
+  const card = document.getElementById("card");
+  const buttonsContainer = document.getElementById("buttonsContainer");
   if (!flipped) {
     flipped = true;
-    document.getElementById("card").classList.add("flipped");
-    document.getElementById("buttonsContainer").style.display = "flex";
+    card.classList.add("flipped");
+    buttonsContainer.style.display = "flex";
+  } else {
+    flipped = false;
+    card.classList.remove("flipped");
+    buttonsContainer.style.display = "none";
   }
 }
 
 function markCorrect(event) {
   event.stopPropagation();
-  cards.splice(current, 1);
-  nextCard();
+  const cardEl = document.getElementById("card");
+  cardEl.classList.remove("flipped");
+  cardEl.addEventListener("transitionend", function handler(e) {
+    if (e.propertyName === "transform") {
+      cardEl.removeEventListener("transitionend", handler);
+      cards.splice(current, 1);
+      nextCard();
+    }
+  });
 }
 
 function markWrong(event) {
   event.stopPropagation();
-  const wrongCard = cards[current];
-  cards.splice(current, 1);
-  cards.push(wrongCard);
-  wrong++;
-  nextCard();
+  const cardEl = document.getElementById("card");
+  cardEl.classList.remove("flipped");
+  cardEl.addEventListener("transitionend", function handler(e) {
+    if (e.propertyName === "transform") {
+      cardEl.removeEventListener("transitionend", handler);
+      const wrongCard = cards[current];
+      cards.splice(current, 1);
+      cards.push(wrongCard);
+      wrong++;
+      nextCard();
+    }
+  });
 }
 
 function nextCard() {
@@ -60,25 +79,16 @@ function nextCard() {
     const timeSpent = Math.floor((endTime - startTime) / 1000);
     const minutes = Math.floor(timeSpent / 60);
     const seconds = timeSpent % 60;
-    const timeString = `${minutes > 0 ? minutes + " دقيقة و " : ""}${seconds} ثانية`;
-    const correct = 3 - wrong;
-    const total = correct + wrong;
-    const score = Math.round((correct / total) * 100);
-    let message = "";
-    if (score === 100) {
-      message = "🎉 مذهل! لم تُخطئ بأي بطاقة!";
-      confetti({ particleCount: 150, spread: 100, origin: { y: 0.6 } });
-    } else if (score >= 90) {
-      message = `🌟 ممتاز جدًا! إتقانك ${score}٪`;
-    } else if (score >= 75) {
-      message = `👍 جيد! إتقانك ${score}٪`;
-    } else {
-      message = `🧐 تحتاج للمراجعة!`;
-    }
+    const correct = initialCardCount - wrong;
+
+    let message = wrong === 0
+      ? "🌟 أداء خارق! كل الإجابات صحيحة!"
+      : (wrong <= 1 ? "👍 أداء ممتاز! أعد التمرين واستمر في التقدم." : "🧐 بداية طيبة! أعد التمرين وستتحسن بإذن الله.");
+
     document.getElementById("result").innerHTML = `
       <h2>${message}</h2>
-      <p>⏱️ الوقت: ${timeString}</p>
-      <button onclick="restart()" style="margin-top: 10px;">🔁 أعد التمرين</button>
+      <p>⏱️ الوقت: ${minutes} دقيقة و ${seconds} ثانية</p>
+      <button onclick="location.reload()">🔁 أعد التمرين</button>
     `;
     document.querySelector(".card-container").style.display = "none";
     document.getElementById("buttonsContainer").style.display = "none";
@@ -88,25 +98,4 @@ function nextCard() {
   }
 }
 
-function restart() {
-  cards = [
-    { question: "ما الصيغة الجزيئية للميثان؟", answer: "CH₄" },
-    { question: "ما الصيغة الجزيئية للإيثان؟", answer: "C₂H₆" },
-    { question: "ما الصيغة الجزيئية للبروبان؟", answer: "C₃H₈" }
-  ];
-  shuffle(cards);
-  current = 0;
-  wrong = 0;
-  flipped = false;
-  startTime = null;
-  document.querySelector(".card-container").style.display = "block";
-  document.getElementById("result").innerHTML = "";
-  document.getElementById("buttonsContainer").style.display = "none";
-  showCard();
-}
-
-window.onload = () => {
-  shuffle(cards);
-  showCard();
-};
-  
+window.onload = showCard;
