@@ -1,15 +1,28 @@
-let cards = [
-  { question: { type: "image", content: "images/1.png" }, answer: { type: "image", content: "images/1-.png" } },
-  { question: { type: "image", content: "images/2.png" }, answer: { type: "text", content: "الحموض الكربوكسيلية" } },
-  { question: { type: "text", content: "cos(2x) = " }, answer: { type: "image", content: "images/2-.png" } },
-  { question: { type: "text", content: "ينتج من تفاعل الألكين مع الهايدروجين بوجود النيكل" }, answer: { type: "text", content: "ألكان" } }
-];
-
+let cards = [];
 let current = 0;
 let wrong = 0;
 let flipped = false;
 let startTime = null;
-const initialCardCount = cards.length; // حفظ عدد البطاقات الأصلية
+let initialCardCount = 0;
+
+function getSetNameFromURL() {
+  const urlParams = new URLSearchParams(window.location.search);
+  return urlParams.get("set") || "set1";
+}
+
+async function loadCards() {
+  const setName = getSetNameFromURL();
+  try {
+    const response = await fetch(`sets/${setName}.json`);
+    if (!response.ok) throw new Error("فشل في تحميل بيانات البطاقات");
+    cards = await response.json();
+    initialCardCount = cards.length;
+    showCard();
+  } catch (error) {
+    document.getElementById("result").innerHTML = "<h2>تعذر تحميل البطاقات!</h2>";
+    console.error(error);
+  }
+}
 
 function showCard() {
   const resultEl = document.getElementById("result");
@@ -20,14 +33,11 @@ function showCard() {
 
   const qEl = document.getElementById("question");
   const aEl = document.getElementById("answerText");
-  if (!qEl || !aEl) {
-    console.error("عناصر السؤال أو الإجابة غير موجودة في الصفحة!");
-    return;
-  }
+  if (!qEl || !aEl) return;
 
   const card = cards[current];
-  qEl.innerHTML = card.question.type === "image" ? `<img src='${card.question.content}' alt='سؤال' onerror='this.alt="تعذر تحميل الصورة"'>` : `<div>${card.question.content}</div>`;
-  aEl.innerHTML = card.answer.type === "image" ? `<img src='${card.answer.content}' alt='إجابة' onerror='this.alt="تعذر تحميل الصورة"'>` : `<div>${card.answer.content}</div>`;
+  qEl.innerHTML = card.question.type === "image" ? `<img src='${card.question.content}' alt='سؤال'>` : `<div>${card.question.content}</div>`;
+  aEl.innerHTML = card.answer.type === "image" ? `<img src='${card.answer.content}' alt='إجابة'>` : `<div>${card.answer.content}</div>`;
 
   const cardEl = document.getElementById("card");
   const buttonsContainer = document.getElementById("buttonsContainer");
@@ -98,7 +108,7 @@ function nextCard() {
     const timeSpent = Math.floor((endTime - startTime) / 1000);
     const minutes = Math.floor(timeSpent / 60);
     const seconds = timeSpent % 60;
-    const total = initialCardCount; // استخدام العدد الأصلي للبطاقات
+    const total = initialCardCount;
     const correct = total - wrong;
     const score = Math.round((correct / total) * 100);
     let message = "";
@@ -142,4 +152,4 @@ function nextCard() {
   }
 }
 
-window.onload = () => showCard();
+window.onload = () => loadCards();
