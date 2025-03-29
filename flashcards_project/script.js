@@ -13,7 +13,7 @@ function getSetNameFromURL() {
 async function loadCards() {
   const setName = getSetNameFromURL();
   try {
-    const response = await fetch(`flashcards_project/sets/${setName}.json`);
+    const response = await fetch(`sets/${setName}.json`);
     if (!response.ok) throw new Error("فشل في تحميل بيانات البطاقات");
     cards = await response.json();
     initialCardCount = cards.length;
