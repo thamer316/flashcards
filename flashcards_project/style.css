@@ -3,6 +3,7 @@ body {
   font-family: 'Arial', sans-serif;
   background-color: #f5f7fa;
   display: flex;
+  
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -25,8 +26,7 @@ body {
   height: 100%;
   text-align: center;
   border-radius: 16px;
-  background: url('logo.png') center center no-repeat;
-  background-size: 100px;
+  background: #fff;
   transition: transform 0.6s;
   transform-style: preserve-3d;
   box-shadow: 0 12px 24px rgba(0,0,0,0.3);
@@ -44,12 +44,17 @@ body {
   height: 100%;
   backface-visibility: hidden;
   display: flex;
+  
   align-items: center;
   justify-content: center;
-  font-size: 24px;
+  font-size: 28px;
   padding: 28px;
   flex-direction: column;
   box-sizing: border-box;
+}
+
+.card .front {
+  background-color: #ffffff;
 }
 
 .card .back {
@@ -57,8 +62,9 @@ body {
   transform: rotateY(180deg);
 }
 
-.buttons-inline {
+.buttons {
   display: flex;
+  
   gap: 10px;
   margin-top: 10px;
 }
@@ -88,4 +94,15 @@ button {
   font-size: 18px;
   text-align: center;
   color: #333;
+}
+
+.card img {
+  max-width: 90%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.card .front, .card .back, .result, button {
+  text-align: right;
+  direction: rtl;
 }

@@ -1,31 +1,40 @@
-
 let cards = [
-  { question: { type: "text", content: "ما عاصمة الأردن؟" }, answer: { type: "text", content: "عمان" } },
   { question: { type: "image", content: "images/1.png" }, answer: { type: "image", content: "images/1-.png" } },
   { question: { type: "image", content: "images/2.png" }, answer: { type: "text", content: "الحموض الكربوكسيلية" } },
-  { question: { type: "text", content: "cos(2x) = " }, answer: { type: "image", content: "images/2-.png" } }
+  { question: { type: "text", content: "cos(2x) = " }, answer: { type: "image", content: "images/2-.png" } },
+  { question: { type: "text", content: "ينتج من تفاعل الألكين مع الهايدروجين بوجود النيكل" }, answer: { type: "text", content: "ألكان" } }
 ];
 
 let current = 0;
 let wrong = 0;
 let flipped = false;
 let startTime = null;
-const initialCardCount = cards.length;
+const initialCardCount = cards.length; // حفظ عدد البطاقات الأصلية
 
 function showCard() {
+  const resultEl = document.getElementById("result");
+  if (cards.length === 0) {
+    if (resultEl) resultEl.innerHTML = "<h2>لا توجد بطاقات متاحة!</h2>";
+    return;
+  }
+
   const qEl = document.getElementById("question");
   const aEl = document.getElementById("answerText");
+  if (!qEl || !aEl) {
+    console.error("عناصر السؤال أو الإجابة غير موجودة في الصفحة!");
+    return;
+  }
+
   const card = cards[current];
+  qEl.innerHTML = card.question.type === "image" ? `<img src='${card.question.content}' alt='سؤال' onerror='this.alt="تعذر تحميل الصورة"'>` : `<div>${card.question.content}</div>`;
+  aEl.innerHTML = card.answer.type === "image" ? `<img src='${card.answer.content}' alt='إجابة' onerror='this.alt="تعذر تحميل الصورة"'>` : `<div>${card.answer.content}</div>`;
 
-  qEl.innerHTML = card.question.type === "image"
-    ? `<img src='${card.question.content}' alt='سؤال'>`
-    : `<div>${card.question.content}</div>`;
-  aEl.innerHTML = card.answer.type === "image"
-    ? `<img src='${card.answer.content}' alt='إجابة'>`
-    : `<div>${card.answer.content}</div>`;
-
-  document.getElementById("card").classList.remove("flipped");
-  document.getElementById("buttonsContainer").style.display = "none";
+  const cardEl = document.getElementById("card");
+  const buttonsContainer = document.getElementById("buttonsContainer");
+  if (cardEl && buttonsContainer) {
+    cardEl.classList.remove("flipped");
+    buttonsContainer.style.display = "none";
+  }
   flipped = false;
   if (!startTime) startTime = new Date();
 }
@@ -33,6 +42,8 @@ function showCard() {
 function flipCard() {
   const card = document.getElementById("card");
   const buttonsContainer = document.getElementById("buttonsContainer");
+  if (!card || !buttonsContainer) return;
+
   if (!flipped) {
     flipped = true;
     card.classList.add("flipped");
@@ -47,6 +58,10 @@ function flipCard() {
 function markCorrect(event) {
   event.stopPropagation();
   const cardEl = document.getElementById("card");
+  const questionEl = document.getElementById("question");
+  if (!cardEl || !questionEl) return;
+
+  questionEl.innerHTML = "";
   cardEl.classList.remove("flipped");
   cardEl.addEventListener("transitionend", function handler(e) {
     if (e.propertyName === "transform") {
@@ -60,6 +75,10 @@ function markCorrect(event) {
 function markWrong(event) {
   event.stopPropagation();
   const cardEl = document.getElementById("card");
+  const questionEl = document.getElementById("question");
+  if (!cardEl || !questionEl) return;
+
+  questionEl.innerHTML = "";
   cardEl.classList.remove("flipped");
   cardEl.addEventListener("transitionend", function handler(e) {
     if (e.propertyName === "transform") {
@@ -79,23 +98,48 @@ function nextCard() {
     const timeSpent = Math.floor((endTime - startTime) / 1000);
     const minutes = Math.floor(timeSpent / 60);
     const seconds = timeSpent % 60;
-    const correct = initialCardCount - wrong;
+    const total = initialCardCount; // استخدام العدد الأصلي للبطاقات
+    const correct = total - wrong;
+    const score = Math.round((correct / total) * 100);
+    let message = "";
 
-    let message = wrong === 0
-      ? "🌟 أداء خارق! كل الإجابات صحيحة!"
-      : (wrong <= 1 ? "👍 أداء ممتاز! أعد التمرين واستمر في التقدم." : "🧐 بداية طيبة! أعد التمرين وستتحسن بإذن الله.");
+    if (wrong === 0) {
+      const messages = [
+        "🌟 أداء خارق! كل الإجابات صحيحة!",
+        "👏 مذهل! لم تخطئ أبداً!",
+        "💯 العلامة الكاملة! واصل الإبداع!",
+        "🎯 دقة تامة! ممتاز جدًا!",
+        "🚀 تعلمك مثالي! أحسنت!"
+      ];
+      message = messages[Math.floor(Math.random() * messages.length)];
+      if (typeof confetti === "function") {
+        confetti({ particleCount: 150, spread: 100, origin: { y: 0.75 } });
+        confetti({ particleCount: 150, spread: 100, origin: { y: 0.75 } });
+      }
+    } else if (score >= 90) {
+      message = "👍 أداء ممتاز! أعد التمرين واستمر في التقدم.";
+    } else if (score >= 75) {
+      message = "💪 أداء جيد! خطوة واحدة وتصل للكمال.";
+    } else {
+      message = "🧐 بداية طيبة! أعد التمرين وستتحسن بإذن الله.";
+    }
 
-    document.getElementById("result").innerHTML = `
-      <h2>${message}</h2>
-      <p>⏱️ الوقت: ${minutes} دقيقة و ${seconds} ثانية</p>
-      <button onclick="location.reload()">🔁 أعد التمرين</button>
-    `;
-    document.querySelector(".card-container").style.display = "none";
-    document.getElementById("buttonsContainer").style.display = "none";
+    const resultEl = document.getElementById("result");
+    if (resultEl) {
+      resultEl.innerHTML = `
+        <h2>${message}</h2>
+        <p>⏱️ الوقت: ${minutes} دقيقة و ${seconds} ثانية</p>
+        <button onclick="location.reload()">🔁 أعد التمرين</button>
+      `;
+    }
+    const cardContainer = document.querySelector(".card-container");
+    const buttonsContainer = document.getElementById("buttonsContainer");
+    if (cardContainer) cardContainer.style.display = "none";
+    if (buttonsContainer) buttonsContainer.style.display = "none";
   } else {
     if (current >= cards.length) current = 0;
     showCard();
   }
 }
 
-window.onload = showCard;
+window.onload = () => showCard();
