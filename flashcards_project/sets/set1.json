@@ -1,0 +1,42 @@
+[
+  {
+    "question": {
+      "type": "image",
+      "content": "images/set1/1.png"
+    },
+    "answer": {
+      "type": "image",
+      "content": "images/set1/1-.png"
+    }
+  },
+  {
+    "question": {
+      "type": "image",
+      "content": "images/set1/2.png"
+    },
+    "answer": {
+      "type": "text",
+      "content": "الحموض الكربوكسيلية"
+    }
+  },
+  {
+    "question": {
+      "type": "text",
+      "content": "cos(2x) = "
+    },
+    "answer": {
+      "type": "image",
+      "content": "images/set1/2-.png"
+    }
+  },
+  {
+    "question": {
+      "type": "text",
+      "content": "ينتج من تفاعل الألكين مع الهايدروجين بوجود النيكل"
+    },
+    "answer": {
+      "type": "text",
+      "content": "ألكان"
+    }
+  }
+]
