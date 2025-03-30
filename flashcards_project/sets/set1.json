@@ -2,17 +2,17 @@
   {
     "question": {
       "type": "image",
-      "content": "images/images1/1.png"
+      "content": "images/images1/4.png"
     },
     "answer": {
       "type": "image",
-      "content": "images/images1/1-.png"
+      "content": "images/images1/4.png"
     }
   },
   {
     "question": {
       "type": "image",
-      "content": "images/images1/2.png"
+      "content": "images/images1/4.png"
     },
     "answer": {
       "type": "text",
