@@ -17,6 +17,12 @@ async function loadCards() {
     if (!response.ok) throw new Error("فشل في تحميل بيانات البطاقات");
     cards = await response.json();
     initialCardCount = cards.length;
+
+    const shuffle = document.getElementById("shuffleCheckbox").checked;
+    if (shuffle) {
+      cards = cards.sort(() => Math.random() - 0.5);
+    }
+
     showCard();
   } catch (error) {
     document.getElementById("result").innerHTML = "<h2>تعذر تحميل البطاقات!</h2>";
@@ -58,6 +64,7 @@ function flipCard() {
     flipped = true;
     card.classList.add("flipped");
     buttonsContainer.style.display = "flex";
+    document.getElementById("shuffleControl").style.display = "none";
   } else {
     flipped = false;
     card.classList.remove("flipped");
@@ -153,3 +160,14 @@ function nextCard() {
 }
 
 window.onload = () => loadCards();
+
+
+document.getElementById("shuffleCheckbox").addEventListener("change", () => {
+  current = 0;
+  wrong = 0;
+  startTime = null;
+  document.getElementById("result").innerHTML = "";
+  document.querySelector(".card-container").style.display = "block";
+  document.getElementById("shuffleControl").style.display = "block";
+  loadCards();
+});
