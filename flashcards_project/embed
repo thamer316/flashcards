@@ -1,0 +1,14 @@
+<iframe id="flashcardsFrame" src="https://thamer316.github.io/flashcards/flashcards_project/index.html?set=set1&amp;nocache=1" width="100%" style="border: none; border-radius: 12px;" scrolling="no">
+</iframe>
+
+<script>
+  window.addEventListener("message", (event) => {
+    if (event.origin === "https://thamer316.github.io") {
+      const iframe = document.getElementById("flashcardsFrame");
+      if (event.data && event.data.type === "resize" && event.data.height) {
+        iframe.style.height = event.data.height + "px";
+      }
+    }
+  });
+</script>
+.
