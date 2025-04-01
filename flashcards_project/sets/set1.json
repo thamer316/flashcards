@@ -9,20 +9,11 @@
       "content": "images/images1/1-.png"
     }
   },
+
   {
     "question": {
       "type": "image",
       "content": "images/images1/2.png"
-    },
-    "answer": {
-      "type": "text",
-      "content": "الحموض الكربوكسيلية"
-    }
-  },
-  {
-    "question": {
-      "type": "text",
-      "content": "cos(2x) = "
     },
     "answer": {
       "type": "image",
@@ -31,12 +22,53 @@
   },
   {
     "question": {
-      "type": "text",
-      "content": "ينتج من تفاعل الألكين مع الهايدروجين بوجود النيكل"
+      "type": "image",
+      "content": "images/images1/3.png"
     },
     "answer": {
-      "type": "text",
-      "content": "ألكان"
+      "type": "image",
+      "content": "images/images1/3-.png"
+    }
+  },
+  {
+    "question": {
+      "type": "image",
+      "content": "images/images1/4.png"
+    },
+    "answer": {
+      "type": "image",
+      "content": "images/images1/4-.png"
+    }
+  },
+  {
+    "question": {
+      "type": "image",
+      "content": "images/images1/5.png"
+    },
+    "answer": {
+      "type": "image",
+      "content": "images/images1/5-.png"
+    }
+  },
+  {
+    "question": {
+      "type": "image",
+      "content": "images/images1/6.png"
+    },
+    "answer": {
+      "type": "image",
+      "content": "images/images1/6-.png"
+    }
+  },
+  {
+    "question": {
+      "type": "image",
+      "content": "images/images1/7.png"
+    },
+    "answer": {
+      "type": "image",
+      "content": "images/images1/7-.png"
     }
   }
+
 ]
