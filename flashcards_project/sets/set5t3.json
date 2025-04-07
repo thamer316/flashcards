@@ -9,7 +9,6 @@
       "content": "images/images3/1-.png"
     }
   },
-
   {
     "question": {
       "type": "image",
@@ -60,9 +59,6 @@
       "content": "images/images3/6-.png"
     }
   },
-
-
-
   {
     "question": {
       "type": "image",
@@ -73,7 +69,6 @@
       "content": "images/images4/1-.png"
     }
   },
-
   {
     "question": {
       "type": "image",
@@ -124,9 +119,6 @@
       "content": "images/images4/6-.png"
     }
   },
-
-
-
   {
     "question": {
       "type": "image",
@@ -137,7 +129,6 @@
       "content": "images/images5/1-.png"
     }
   },
-
   {
     "question": {
       "type": "image",
@@ -188,5 +179,4 @@
       "content": "images/images5/6-.png"
     }
   }
-
 ]
