@@ -78,55 +78,5 @@
             "type": "image",
             "content": "images/images13t15/8-.png"
         }
-    },
-    {
-        "question": {
-            "type": "image",
-            "content": "images/images13t15/9.png"
-        },
-        "answer": {
-            "type": "image",
-            "content": "images/images13t15/9-.png"
-        }
-    },
-    {
-        "question": {
-            "type": "image",
-            "content": "images/images13t15/10.png"
-        },
-        "answer": {
-            "type": "image",
-            "content": "images/images13t15/10-.png"
-        }
-    },
-    {
-        "question": {
-            "type": "image",
-            "content": "images/images13t15/11.png"
-        },
-        "answer": {
-            "type": "image",
-            "content": "images/images13t15/11-.png"
-        }
-    },
-    {
-        "question": {
-            "type": "image",
-            "content": "images/images13t15/12.png"
-        },
-        "answer": {
-            "type": "image",
-            "content": "images/images13t15/12-.png"
-        }
-    },
-    {
-        "question": {
-            "type": "image",
-            "content": "images/images13t15/13.png"
-        },
-        "answer": {
-            "type": "image",
-            "content": "images/images13t15/13-.png"
-        }
     }
 ]
