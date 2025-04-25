@@ -59,16 +59,6 @@
             "type": "image",
             "content": "images/images18/6-.png"
         }
-    },
-    {
-        "question": {
-            "type": "image",
-            "content": "images/images18/7.png"
-        },
-        "answer": {
-            "type": "image",
-            "content": "images/images18/7-.png"
-        }
     }
 
 ]
