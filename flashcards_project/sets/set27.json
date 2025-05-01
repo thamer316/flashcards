@@ -68,5 +68,25 @@
       "type": "image",
       "content": "images/images27/7-.png"
     }
+  },
+  {
+    "question": {
+      "type": "image",
+      "content": "images/images27/8.png"
+    },
+    "answer": {
+      "type": "image",
+      "content": "images/images27/8-.png"
+    }
+  },
+  {
+    "question": {
+      "type": "image",
+      "content": "images/images27/9.png"
+    },
+    "answer": {
+      "type": "image",
+      "content": "images/images27/9-.png"
+    }
   }
 ]
