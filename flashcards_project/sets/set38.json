@@ -1,0 +1,92 @@
+[
+    {
+        "question": {
+            "type": "image",
+            "content": "images/images38/1.png"
+        },
+        "answer": {
+            "type": "image",
+            "content": "images/images38/1-.png"
+        }
+    },
+    {
+        "question": {
+            "type": "image",
+            "content": "images/images38/2.png"
+        },
+        "answer": {
+            "type": "image",
+            "content": "images/images38/2-.png"
+        }
+    },
+    {
+        "question": {
+            "type": "image",
+            "content": "images/images38/3.png"
+        },
+        "answer": {
+            "type": "image",
+            "content": "images/images38/3-.png"
+        }
+    },
+    {
+        "question": {
+            "type": "image",
+            "content": "images/images38/4.png"
+        },
+        "answer": {
+            "type": "image",
+            "content": "images/images38/4-.png"
+        }
+    },
+    {
+        "question": {
+            "type": "image",
+            "content": "images/images38/5.png"
+        },
+        "answer": {
+            "type": "image",
+            "content": "images/images38/5-.png"
+        }
+    },
+    {
+        "question": {
+            "type": "image",
+            "content": "images/images38/6.png"
+        },
+        "answer": {
+            "type": "image",
+            "content": "images/images38/6-.png"
+        }
+    },
+    {
+        "question": {
+            "type": "image",
+            "content": "images/images38/7.png"
+        },
+        "answer": {
+            "type": "image",
+            "content": "images/images38/7-.png"
+        }
+    },
+    {
+        "question": {
+            "type": "image",
+            "content": "images/images38/8.png"
+        },
+        "answer": {
+            "type": "image",
+            "content": "images/images38/8-.png"
+        }
+    },
+    {
+        "question": {
+            "type": "image",
+            "content": "images/images38/9.png"
+        },
+        "answer": {
+            "type": "image",
+            "content": "images/images38/9-.png"
+        }
+    }
+]
