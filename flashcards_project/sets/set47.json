@@ -1,0 +1,92 @@
+[
+  {
+    "question": {
+      "type": "image",
+      "content": "images/images47/1.png"
+    },
+    "answer": {
+      "type": "image",
+      "content": "images/images47/1-.png"
+    }
+  },
+  {
+    "question": {
+      "type": "image",
+      "content": "images/images47/2.png"
+    },
+    "answer": {
+      "type": "image",
+      "content": "images/images47/2-.png"
+    }
+  },
+  {
+    "question": {
+      "type": "image",
+      "content": "images/images47/3.png"
+    },
+    "answer": {
+      "type": "image",
+      "content": "images/images47/3-.png"
+    }
+  },
+  {
+    "question": {
+      "type": "image",
+      "content": "images/images47/4.png"
+    },
+    "answer": {
+      "type": "image",
+      "content": "images/images47/4-.png"
+    }
+  },
+  {
+    "question": {
+      "type": "image",
+      "content": "images/images47/5.png"
+    },
+    "answer": {
+      "type": "image",
+      "content": "images/images47/5-.png"
+    }
+  },
+  {
+    "question": {
+      "type": "image",
+      "content": "images/images47/6.png"
+    },
+    "answer": {
+      "type": "image",
+      "content": "images/images47/6-.png"
+    }
+  },
+  {
+    "question": {
+      "type": "image",
+      "content": "images/images47/7.png"
+    },
+    "answer": {
+      "type": "image",
+      "content": "images/images47/7-.png"
+    }
+  },
+  {
+    "question": {
+      "type": "image",
+      "content": "images/images47/8.png"
+    },
+    "answer": {
+      "type": "image",
+      "content": "images/images47/8-.png"
+    }
+  },
+  {
+    "question": {
+      "type": "image",
+      "content": "images/images47/9.png"
+    },
+    "answer": {
+      "type": "image",
+      "content": "images/images47/9-.png"
+    }
+  }
+]
