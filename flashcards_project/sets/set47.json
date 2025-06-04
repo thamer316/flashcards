@@ -88,5 +88,55 @@
       "type": "image",
       "content": "images/images47/9-.png"
     }
+  },
+  {
+    "question": {
+      "type": "image",
+      "content": "images/images47/10.png"
+    },
+    "answer": {
+      "type": "image",
+      "content": "images/images47/10-.png"
+    }
+  },
+  {
+    "question": {
+      "type": "image",
+      "content": "images/images47/11.png"
+    },
+    "answer": {
+      "type": "image",
+      "content": "images/images47/11-.png"
+    }
+  },
+  {
+    "question": {
+      "type": "image",
+      "content": "images/images47/12.png"
+    },
+    "answer": {
+      "type": "image",
+      "content": "images/images47/12-.png"
+    }
+  },
+  {
+    "question": {
+      "type": "image",
+      "content": "images/images47/13.png"
+    },
+    "answer": {
+      "type": "image",
+      "content": "images/images47/13-.png"
+    }
+  },
+  {
+    "question": {
+      "type": "image",
+      "content": "images/images47/14.png"
+    },
+    "answer": {
+      "type": "image",
+      "content": "images/images47/14-.png"
+    }
   }
 ]
