@@ -2,61 +2,71 @@
   {
     "question": {
       "type": "image",
-      "content": "images/images34/1.png"
+      "content": "images/images48/1.png"
     },
     "answer": {
       "type": "image",
-      "content": "images/images34/1-.png"
+      "content": "images/images48/1-.png"
     }
   },
   {
     "question": {
       "type": "image",
-      "content": "images/images34/2.png"
+      "content": "images/images48/2.png"
     },
     "answer": {
       "type": "image",
-      "content": "images/images34/2-.png"
+      "content": "images/images48/2-.png"
     }
   },
   {
     "question": {
       "type": "image",
-      "content": "images/images34/3.png"
+      "content": "images/images48/3.png"
     },
     "answer": {
       "type": "image",
-      "content": "images/images34/3-.png"
+      "content": "images/images48/3-.png"
     }
   },
   {
     "question": {
       "type": "image",
-      "content": "images/images34/4.png"
+      "content": "images/images48/4.png"
     },
     "answer": {
       "type": "image",
-      "content": "images/images34/4-.png"
+      "content": "images/images48/4-.png"
     }
   },
   {
     "question": {
       "type": "image",
-      "content": "images/images34/5.png"
+      "content": "images/images48/5.png"
     },
     "answer": {
       "type": "image",
-      "content": "images/images34/5-.png"
+      "content": "images/images48/5-.png"
     }
   },
   {
     "question": {
       "type": "image",
-      "content": "images/images34/6.png"
+      "content": "images/images48/6.png"
     },
     "answer": {
       "type": "image",
-      "content": "images/images34/6-.png"
+      "content": "images/images48/6-.png"
+    }
+  },
+  {
+    "question": {
+      "type": "image",
+      "content": "images/images48/7.png"
+    },
+    "answer": {
+      "type": "image",
+      "content": "images/images48/7-.png"
     }
   }
 ]
