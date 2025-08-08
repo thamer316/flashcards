@@ -1,91 +1,92 @@
 [
   {
-    "question": { "type": "image", "content": "Uni_Master/images200/1.png" },
-    "answer":   { "type": "image", "content": "Uni_Master/images200/1-.png" }
+    "question": { "type": "image", "content": "images/images200/1.png" },
+    "answer":   { "type": "image", "content": "images/images200/1-.png" }
   },
   {
-    "question": { "type": "image", "content": "Uni_Master/images200/2.png" },
-    "answer":   { "type": "image", "content": "Uni_Master/images200/2-.png" }
+    "question": { "type": "image", "content": "images/images200/2.png" },
+    "answer":   { "type": "image", "content": "images/images200/2-.png" }
   },
   {
-    "question": { "type": "image", "content": "Uni_Master/images200/3.png" },
-    "answer":   { "type": "image", "content": "Uni_Master/images200/3-.png" }
+    "question": { "type": "image", "content": "images/images200/3.png" },
+    "answer":   { "type": "image", "content": "images/images200/3-.png" }
   },
   {
-    "question": { "type": "image", "content": "Uni_Master/images200/4.png" },
-    "answer":   { "type": "image", "content": "Uni_Master/images200/4-.png" }
+    "question": { "type": "image", "content": "images/images200/4.png" },
+    "answer":   { "type": "image", "content": "images/images200/4-.png" }
   },
   {
-    "question": { "type": "image", "content": "Uni_Master/images200/5.png" },
-    "answer":   { "type": "image", "content": "Uni_Master/images200/5-.png" }
+    "question": { "type": "image", "content": "images/images200/5.png" },
+    "answer":   { "type": "image", "content": "images/images200/5-.png" }
   },
   {
-    "question": { "type": "image", "content": "Uni_Master/images200/6.png" },
-    "answer":   { "type": "image", "content": "Uni_Master/images200/6-.png" }
+    "question": { "type": "image", "content": "images/images200/6.png" },
+    "answer":   { "type": "image", "content": "images/images200/6-.png" }
   },
   {
-    "question": { "type": "image", "content": "Uni_Master/images200/7.png" },
-    "answer":   { "type": "image", "content": "Uni_Master/images200/7-.png" }
+    "question": { "type": "image", "content": "images/images200/7.png" },
+    "answer":   { "type": "image", "content": "images/images200/7-.png" }
   },
   {
-    "question": { "type": "image", "content": "Uni_Master/images200/8.png" },
-    "answer":   { "type": "image", "content": "Uni_Master/images200/8-.png" }
+    "question": { "type": "image", "content": "images/images200/8.png" },
+    "answer":   { "type": "image", "content": "images/images200/8-.png" }
   },
   {
-    "question": { "type": "image", "content": "Uni_Master/images200/9.png" },
-    "answer":   { "type": "image", "content": "Uni_Master/images200/9-.png" }
+    "question": { "type": "image", "content": "images/images200/9.png" },
+    "answer":   { "type": "image", "content": "images/images200/9-.png" }
   },
   {
-    "question": { "type": "image", "content": "Uni_Master/images200/10.png" },
-    "answer":   { "type": "image", "content": "Uni_Master/images200/10-.png" }
+    "question": { "type": "image", "content": "images/images200/10.png" },
+    "answer":   { "type": "image", "content": "images/images200/10-.png" }
   },
   {
-    "question": { "type": "image", "content": "Uni_Master/images200/11.png" },
-    "answer":   { "type": "image", "content": "Uni_Master/images200/11-.png" }
+    "question": { "type": "image", "content": "images/images200/11.png" },
+    "answer":   { "type": "image", "content": "images/images200/11-.png" }
   },
   {
-    "question": { "type": "image", "content": "Uni_Master/images200/12.png" },
-    "answer":   { "type": "image", "content": "Uni_Master/images200/12-.png" }
+    "question": { "type": "image", "content": "images/images200/12.png" },
+    "answer":   { "type": "image", "content": "images/images200/12-.png" }
   },
   {
-    "question": { "type": "image", "content": "Uni_Master/images200/13.png" },
-    "answer":   { "type": "image", "content": "Uni_Master/images200/13-.png" }
+    "question": { "type": "image", "content": "images/images200/13.png" },
+    "answer":   { "type": "image", "content": "images/images200/13-.png" }
   },
   {
-    "question": { "type": "image", "content": "Uni_Master/images200/14.png" },
-    "answer":   { "type": "image", "content": "Uni_Master/images200/14-.png" }
+    "question": { "type": "image", "content": "images/images200/14.png" },
+    "answer":   { "type": "image", "content": "images/images200/14-.png" }
   },
   {
-    "question": { "type": "image", "content": "Uni_Master/images200/15.png" },
-    "answer":   { "type": "image", "content": "Uni_Master/images200/15-.png" }
+    "question": { "type": "image", "content": "images/images200/15.png" },
+    "answer":   { "type": "image", "content": "images/images200/15-.png" }
   },
   {
-    "question": { "type": "image", "content": "Uni_Master/images200/16.png" },
-    "answer":   { "type": "image", "content": "Uni_Master/images200/16-.png" }
+    "question": { "type": "image", "content": "images/images200/16.png" },
+    "answer":   { "type": "image", "content": "images/images200/16-.png" }
   },
   {
-    "question": { "type": "image", "content": "Uni_Master/images200/17.png" },
-    "answer":   { "type": "image", "content": "Uni_Master/images200/17-.png" }
+    "question": { "type": "image", "content": "images/images200/17.png" },
+    "answer":   { "type": "image", "content": "images/images200/17-.png" }
   },
   {
-    "question": { "type": "image", "content": "Uni_Master/images200/18.png" },
-    "answer":   { "type": "image", "content": "Uni_Master/images200/18-.png" }
+    "question": { "type": "image", "content": "images/images200/18.png" },
+    "answer":   { "type": "image", "content": "images/images200/18-.png" }
   },
   {
-    "question": { "type": "image", "content": "Uni_Master/images200/19.png" },
-    "answer":   { "type": "image", "content": "Uni_Master/images200/19-.png" }
+    "question": { "type": "image", "content": "images/images200/19.png" },
+    "answer":   { "type": "image", "content": "images/images200/19-.png" }
   },
   {
-    "question": { "type": "image", "content": "Uni_Master/images200/20.png" },
-    "answer":   { "type": "image", "content": "Uni_Master/images200/20-.png" }
+    "question": { "type": "image", "content": "images/images200/20.png" },
+    "answer":   { "type": "image", "content": "images/images200/20-.png" }
   },
   {
-    "question": { "type": "image", "content": "Uni_Master/images200/21.png" },
-    "answer":   { "type": "image", "content": "Uni_Master/images200/21-.png" }
+    "question": { "type": "image", "content": "images/images200/21.png" },
+    "answer":   { "type": "image", "content": "images/images200/21-.png" }
   },
   {
-    "question": { "type": "image", "content": "Uni_Master/images200/22.png" },
-    "answer":   { "type": "image", "content": "Uni_Master/images200/22-.png" }
+    "question": { "type": "image", "content": "images/images200/22.png" },
+    "answer":   { "type": "image", "content": "images/images200/22-.png" }
   }
 ]
+
 
