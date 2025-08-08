@@ -1,90 +1,91 @@
 [
   {
-    "question": { "type": "image", "content": "Uni_Master/images1/1.png" },
-    "answer":   { "type": "image", "content": "Uni_Master/images1/1-.png" }
+    "question": { "type": "image", "content": "images100/1.png" },
+    "answer":   { "type": "image", "content": "images100/1-.png" }
   },
   {
-    "question": { "type": "image", "content": "Uni_Master/images1/2.png" },
-    "answer":   { "type": "image", "content": "Uni_Master/images1/2-.png" }
+    "question": { "type": "image", "content": "images100/2.png" },
+    "answer":   { "type": "image", "content": "images100/2-.png" }
   },
   {
-    "question": { "type": "image", "content": "Uni_Master/images1/3.png" },
-    "answer":   { "type": "image", "content": "Uni_Master/images1/3-.png" }
+    "question": { "type": "image", "content": "images100/3.png" },
+    "answer":   { "type": "image", "content": "images100/3-.png" }
   },
   {
-    "question": { "type": "image", "content": "Uni_Master/images1/4.png" },
-    "answer":   { "type": "image", "content": "Uni_Master/images1/4-.png" }
+    "question": { "type": "image", "content": "images100/4.png" },
+    "answer":   { "type": "image", "content": "images100/4-.png" }
   },
   {
-    "question": { "type": "image", "content": "Uni_Master/images1/5.png" },
-    "answer":   { "type": "image", "content": "Uni_Master/images1/5-.png" }
+    "question": { "type": "image", "content": "images100/5.png" },
+    "answer":   { "type": "image", "content": "images100/5-.png" }
   },
   {
-    "question": { "type": "image", "content": "Uni_Master/images1/6.png" },
-    "answer":   { "type": "image", "content": "Uni_Master/images1/6-.png" }
+    "question": { "type": "image", "content": "images100/6.png" },
+    "answer":   { "type": "image", "content": "images100/6-.png" }
   },
   {
-    "question": { "type": "image", "content": "Uni_Master/images1/7.png" },
-    "answer":   { "type": "image", "content": "Uni_Master/images1/7-.png" }
+    "question": { "type": "image", "content": "images100/7.png" },
+    "answer":   { "type": "image", "content": "images100/7-.png" }
   },
   {
-    "question": { "type": "image", "content": "Uni_Master/images1/8.png" },
-    "answer":   { "type": "image", "content": "Uni_Master/images1/8-.png" }
+    "question": { "type": "image", "content": "images100/8.png" },
+    "answer":   { "type": "image", "content": "images100/8-.png" }
   },
   {
-    "question": { "type": "image", "content": "Uni_Master/images1/9.png" },
-    "answer":   { "type": "image", "content": "Uni_Master/images1/9-.png" }
+    "question": { "type": "image", "content": "images100/9.png" },
+    "answer":   { "type": "image", "content": "images100/9-.png" }
   },
   {
-    "question": { "type": "image", "content": "Uni_Master/images1/10.png" },
-    "answer":   { "type": "image", "content": "Uni_Master/images1/10-.png" }
+    "question": { "type": "image", "content": "images100/10.png" },
+    "answer":   { "type": "image", "content": "images100/10-.png" }
   },
   {
-    "question": { "type": "image", "content": "Uni_Master/images1/11.png" },
-    "answer":   { "type": "image", "content": "Uni_Master/images1/11-.png" }
+    "question": { "type": "image", "content": "images100/11.png" },
+    "answer":   { "type": "image", "content": "images100/11-.png" }
   },
   {
-    "question": { "type": "image", "content": "Uni_Master/images1/12.png" },
-    "answer":   { "type": "image", "content": "Uni_Master/images1/12-.png" }
+    "question": { "type": "image", "content": "images100/12.png" },
+    "answer":   { "type": "image", "content": "images100/12-.png" }
   },
   {
-    "question": { "type": "image", "content": "Uni_Master/images1/13.png" },
-    "answer":   { "type": "image", "content": "Uni_Master/images1/13-.png" }
+    "question": { "type": "image", "content": "images100/13.png" },
+    "answer":   { "type": "image", "content": "images100/13-.png" }
   },
   {
-    "question": { "type": "image", "content": "Uni_Master/images1/14.png" },
-    "answer":   { "type": "image", "content": "Uni_Master/images1/14-.png" }
+    "question": { "type": "image", "content": "images100/14.png" },
+    "answer":   { "type": "image", "content": "images100/14-.png" }
   },
   {
-    "question": { "type": "image", "content": "Uni_Master/images1/15.png" },
-    "answer":   { "type": "image", "content": "Uni_Master/images1/15-.png" }
+    "question": { "type": "image", "content": "images100/15.png" },
+    "answer":   { "type": "image", "content": "images100/15-.png" }
   },
   {
-    "question": { "type": "image", "content": "Uni_Master/images1/16.png" },
-    "answer":   { "type": "image", "content": "Uni_Master/images1/16-.png" }
+    "question": { "type": "image", "content": "images100/16.png" },
+    "answer":   { "type": "image", "content": "images100/16-.png" }
   },
   {
-    "question": { "type": "image", "content": "Uni_Master/images1/17.png" },
-    "answer":   { "type": "image", "content": "Uni_Master/images1/17-.png" }
+    "question": { "type": "image", "content": "images100/17.png" },
+    "answer":   { "type": "image", "content": "images100/17-.png" }
   },
   {
-    "question": { "type": "image", "content": "Uni_Master/images1/18.png" },
-    "answer":   { "type": "image", "content": "Uni_Master/images1/18-.png" }
+    "question": { "type": "image", "content": "images100/18.png" },
+    "answer":   { "type": "image", "content": "images100/18-.png" }
   },
   {
-    "question": { "type": "image", "content": "Uni_Master/images1/19.png" },
-    "answer":   { "type": "image", "content": "Uni_Master/images1/19-.png" }
+    "question": { "type": "image", "content": "images100/19.png" },
+    "answer":   { "type": "image", "content": "images100/19-.png" }
   },
   {
-    "question": { "type": "image", "content": "Uni_Master/images1/20.png" },
-    "answer":   { "type": "image", "content": "Uni_Master/images1/20-.png" }
+    "question": { "type": "image", "content": "images100/20.png" },
+    "answer":   { "type": "image", "content": "images100/20-.png" }
   },
   {
-    "question": { "type": "image", "content": "Uni_Master/images1/21.png" },
-    "answer":   { "type": "image", "content": "Uni_Master/images1/21-.png" }
+    "question": { "type": "image", "content": "images100/21.png" },
+    "answer":   { "type": "image", "content": "images100/21-.png" }
   },
   {
-    "question": { "type": "image", "content": "Uni_Master/images1/22.png" },
-    "answer":   { "type": "image", "content": "Uni_Master/images1/22-.png" }
+    "question": { "type": "image", "content": "images100/22.png" },
+    "answer":   { "type": "image", "content": "images100/22-.png" }
   }
 ]
+
