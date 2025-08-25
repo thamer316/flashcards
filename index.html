@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقع النصيحة التعليمي</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fafafa;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #663399, #8B4FB3);
+            color: white;
+            padding: 30px;
+            text-align: center;
+            position: relative;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: bold;
+            background: linear-gradient(45deg, #ffffff, #FFC107, #ffffff);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: textGradient 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes textGradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            100% {
+                background-position: 100% 50%;
+            }
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .form-container {
+            padding: 40px;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            position: relative;
+        }
+
+        .form-group label {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #663399;
+            font-size: 1.1rem;
+        }
+
+        .grade-info {
+            font-size: 0.85rem;
+            color: #888;
+            font-weight: normal;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 15px 20px;
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            background: #fafafa;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #663399;
+            background: white;
+            box-shadow: 0 0 0 3px rgba(102, 51, 153, 0.1);
+            animation: inputFocus 0.5s ease;
+        }
+
+        @keyframes inputFocus {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.02);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .form-group input:valid {
+            border-color: #28a745;
+        }
+
+        .calculate-btn {
+            width: 100%;
+            padding: 18px;
+            background: linear-gradient(135deg, #663399, #8B4FB3, #FFC107);
+            background-size: 200% 200%;
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(102, 51, 153, 0.3);
+            animation: buttonGlow 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes buttonGlow {
+            0% {
+                background-position: 0% 50%;
+                box-shadow: 0 4px 15px rgba(102, 51, 153, 0.3);
+            }
+            100% {
+                background-position: 100% 50%;
+                box-shadow: 0 6px 25px rgba(255, 193, 7, 0.4);
+            }
+        }
+
+        .calculate-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(102, 51, 153, 0.4);
+        }
+
+        .calculate-btn:active {
+            transform: translateY(0);
+        }
+
+        .results {
+            display: none;
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            border-radius: 15px;
+            padding: 30px;
+            border: 2px solid #e0e0e0;
+        }
+
+        .results.show {
+            display: block;
+            animation: slideUp 0.5s ease;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .results h2 {
+            color: #663399;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            text-align: center;
+        }
+
+        .result-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .result-card {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+            animation: cardFloat 4s ease-in-out infinite alternate;
+        }
+
+        @keyframes cardFloat {
+            0% {
+                transform: translateY(0px) scale(1);
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            }
+            100% {
+                transform: translateY(-5px) scale(1.02);
+                box-shadow: 0 8px 25px rgba(102, 51, 153, 0.2);
+            }
+        }
+
+        .result-card:hover {
+            border-color: #663399;
+            transform: translateY(-2px);
+        }
+
+        .result-label {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 8px;
+        }
+
+        .result-value {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #663399;
+        }
+
+        .footer-logo {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: #f8f9fa;
+            border-top: 2px solid #e9ecef;
+        }
+
+        .footer-logo-text {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #663399;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            letter-spacing: 2px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 10px;
+                border-radius: 15px;
+            }
+
+            .header {
+                padding: 20px;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .form-container {
+                padding: 25px;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .footer-logo-text {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+
+            .header h1 {
+                font-size: 1.7rem;
+            }
+
+            .form-container {
+                padding: 20px;
+            }
+
+            .form-group input {
+                padding: 12px 15px;
+            }
+
+            .calculate-btn {
+                padding: 15px;
+                font-size: 1.1rem;
+            }
+
+            .footer-logo-text {
+                font-size: 1.3rem;
+                letter-spacing: 1px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>موقع النصيحة التعليمي</h1>
+        </div>
+
+        <div class="form-container">
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="arabic">
+                        <span>العربي</span>
+                        <span class="grade-info">النهاية العظمى: 100</span>
+                    </label>
+                    <input type="number" id="arabic" min="0" max="100" placeholder="أدخل علامة العربي">
+                </div>
+
+                <div class="form-group">
+                    <label for="english">
+                        <span>الإنجليزي</span>
+                        <span class="grade-info">النهاية العظمى: 100</span>
+                    </label>
+                    <input type="number" id="english" min="0" max="100" placeholder="أدخل علامة الإنجليزي">
+                </div>
+
+                <div class="form-group">
+                    <label for="religion">
+                        <span>الدين</span>
+                        <span class="grade-info">النهاية العظمى: 60</span>
+                    </label>
+                    <input type="number" id="religion" min="0" max="60" placeholder="أدخل علامة الدين">
+                </div>
+
+                <div class="form-group">
+                    <label for="history">
+                        <span>التاريخ</span>
+                        <span class="grade-info">النهاية العظمى: 40</span>
+                    </label>
+                    <input type="number" id="history" min="0" max="40" placeholder="أدخل علامة التاريخ">
+                </div>
+            </div>
+
+            <button class="calculate-btn" onclick="calculateGrades()">احسب المعدل</button>
+
+            <div class="results" id="results">
+                <h2>النتائج</h2>
+                <div class="result-grid">
+                    <div class="result-card">
+                        <div class="result-label">المجموع</div>
+                        <div class="result-value" id="total">-</div>
+                        <div style="font-size: 0.8rem; color: #888; margin-top: 5px;">من 300</div>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-label">المعدل</div>
+                        <div class="result-value" id="average">-</div>
+                        <div style="font-size: 0.8rem; color: #888; margin-top: 5px;">من 30</div>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-label">النسبة المئوية</div>
+                        <div class="result-value" id="percentage">-</div>
+                        <div style="font-size: 0.8rem; color: #888; margin-top: 5px;">%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function calculateGrades() {
+            // الحصول على القيم من الحقول
+            const arabic = parseFloat(document.getElementById('arabic').value) || 0;
+            const english = parseFloat(document.getElementById('english').value) || 0;
+            const religion = parseFloat(document.getElementById('religion').value) || 0;
+            const history = parseFloat(document.getElementById('history').value) || 0;
+
+            // التحقق من صحة القيم
+            if (arabic > 100 || english > 100 || religion > 60 || history > 40) {
+                alert('يرجى التأكد من أن العلامات لا تتجاوز النهاية العظمى لكل مادة');
+                return;
+            }
+
+            if (arabic < 0 || english < 0 || religion < 0 || history < 0) {
+                alert('يرجى إدخال علامات صحيحة (أكبر من أو تساوي الصفر)');
+                return;
+            }
+
+            // حساب المجموع (تحويل جميع العلامات إلى مقياس من 100)
+            const arabicNormalized = arabic; // من 100
+            const englishNormalized = english; // من 100
+            const religionNormalized = (religion / 60) * 100; // تحويل من 60 إلى 100
+            const historyNormalized = (history / 40) * 100; // تحويل من 40 إلى 100
+
+            const totalNormalized = arabicNormalized + englishNormalized + religionNormalized + historyNormalized;
+            
+            // المجموع الفعلي من 300
+            const actualTotal = arabic + english + religion + history;
+            
+            // المعدل من 30 (المجموع ÷ 10)
+            const average = actualTotal / 10;
+            
+            // النسبة المئوية
+            const percentage = (totalNormalized / 400) * 100;
+
+            // عرض النتائج
+            document.getElementById('total').textContent = actualTotal.toFixed(1);
+            document.getElementById('average').textContent = average.toFixed(1);
+            document.getElementById('percentage').textContent = percentage.toFixed(1) + '%';
+
+            // إظهار النتائج
+            document.getElementById('results').classList.add('show');
+        }
+
+        // إضافة مستمعات الأحداث للحقول لمنع إدخال قيم أكبر من الحد الأقصى
+        document.addEventListener('DOMContentLoaded', function() {
+            const inputs = document.querySelectorAll('input[type="number"]');
+            
+            inputs.forEach(input => {
+                input.addEventListener('input', function(e) {
+                    const max = parseInt(this.getAttribute('max'));
+                    const min = parseInt(this.getAttribute('min'));
+                    
+                    if (parseFloat(this.value) > max) {
+                        this.value = max;
+                        alert(`العلامة القصوى لهذه المادة هي ${max}`);
+                    }
+                    if (parseFloat(this.value) < min) {
+                        this.value = min;
+                    }
+                });
+
+                input.addEventListener('keypress', function(e) {
+                    if (e.key === 'Enter') {
+                        calculateGrades();
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
