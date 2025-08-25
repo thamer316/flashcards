@@ -369,13 +369,12 @@
                         <div class="result-value" id="average">-</div>
                         <div style="font-size: 0.8rem; color: #888; margin-top: 5px;">من 30</div>
                     </div>
-                    <div class="result-card">
-                        <div class="result-label">النسبة المئوية</div>
-                        <div class="result-value" id="percentage">-</div>
-                        <div style="font-size: 0.8rem; color: #888; margin-top: 5px;">%</div>
-                    </div>
                 </div>
             </div>
+        </div>
+
+        <div class="footer-logo">
+            <img src="logo.png" alt="موقع النصيحة التعليمي" style="max-width: 400px; width: 100%; height: auto;">
         </div>
     </div>
 
@@ -398,27 +397,15 @@
                 return;
             }
 
-            // حساب المجموع (تحويل جميع العلامات إلى مقياس من 100)
-            const arabicNormalized = arabic; // من 100
-            const englishNormalized = english; // من 100
-            const religionNormalized = (religion / 60) * 100; // تحويل من 60 إلى 100
-            const historyNormalized = (history / 40) * 100; // تحويل من 40 إلى 100
-
-            const totalNormalized = arabicNormalized + englishNormalized + religionNormalized + historyNormalized;
-            
-            // المجموع الفعلي من 300
+            // حساب المجموع الفعلي من 300
             const actualTotal = arabic + english + religion + history;
             
             // المعدل من 30 (المجموع ÷ 10)
             const average = actualTotal / 10;
-            
-            // النسبة المئوية
-            const percentage = (totalNormalized / 400) * 100;
 
             // عرض النتائج
             document.getElementById('total').textContent = actualTotal.toFixed(1);
             document.getElementById('average').textContent = average.toFixed(1);
-            document.getElementById('percentage').textContent = percentage.toFixed(1) + '%';
 
             // إظهار النتائج
             document.getElementById('results').classList.add('show');
