@@ -38,15 +38,5 @@
             "type": "image",
             "content": "images/images55/4-.png"
         }
-    },
-    {
-        "question": {
-            "type": "image",
-            "content": "images/images55/5.png"
-        },
-        "answer": {
-            "type": "image",
-            "content": "images/images55/5-.png"
-        }
     }
 ]
