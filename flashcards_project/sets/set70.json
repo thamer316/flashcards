@@ -1,0 +1,162 @@
+[
+  {
+    "question": {
+      "type": "image",
+      "content": "images/images70/1.png"
+    },
+    "answer": {
+      "type": "image",
+      "content": "images/images70/1-.png"
+    }
+  },
+  {
+    "question": {
+      "type": "image",
+      "content": "images/images70/2.png"
+    },
+    "answer": {
+      "type": "image",
+      "content": "images/images70/2-.png"
+    }
+  },
+  {
+    "question": {
+      "type": "image",
+      "content": "images/images70/3.png"
+    },
+    "answer": {
+      "type": "image",
+      "content": "images/images70/3-.png"
+    }
+  },
+  {
+    "question": {
+      "type": "image",
+      "content": "images/images70/4.png"
+    },
+    "answer": {
+      "type": "image",
+      "content": "images/images70/4-.png"
+    }
+  },
+  {
+    "question": {
+      "type": "image",
+      "content": "images/images70/5.png"
+    },
+    "answer": {
+      "type": "image",
+      "content": "images/images70/5-.png"
+    }
+  },
+  {
+    "question": {
+      "type": "image",
+      "content": "images/images70/6.png"
+    },
+    "answer": {
+      "type": "image",
+      "content": "images/images70/6-.png"
+    }
+  },
+  {
+    "question": {
+      "type": "image",
+      "content": "images/images70/7.png"
+    },
+    "answer": {
+      "type": "image",
+      "content": "images/images70/7-.png"
+    }
+  },
+  {
+    "question": {
+      "type": "image",
+      "content": "images/images70/8.png"
+    },
+    "answer": {
+      "type": "image",
+      "content": "images/images70/8-.png"
+    }
+  },
+  {
+    "question": {
+      "type": "image",
+      "content": "images/images70/9.png"
+    },
+    "answer": {
+      "type": "image",
+      "content": "images/images70/9-.png"
+    }
+  },
+  {
+    "question": {
+      "type": "image",
+      "content": "images/images70/10.png"
+    },
+    "answer": {
+      "type": "image",
+      "content": "images/images70/10-.png"
+    }
+  },
+  {
+    "question": {
+      "type": "image",
+      "content": "images/images70/11.png"
+    },
+    "answer": {
+      "type": "image",
+      "content": "images/images70/11-.png"
+    }
+  },
+  {
+    "question": {
+      "type": "image",
+      "content": "images/images70/12.png"
+    },
+    "answer": {
+      "type": "image",
+      "content": "images/images70/12-.png"
+    }
+  },
+  {
+    "question": {
+      "type": "image",
+      "content": "images/images70/13.png"
+    },
+    "answer": {
+      "type": "image",
+      "content": "images/images70/13-.png"
+    }
+  },
+  {
+    "question": {
+      "type": "image",
+      "content": "images/images70/14.png"
+    },
+    "answer": {
+      "type": "image",
+      "content": "images/images70/14-.png"
+    }
+  },
+  {
+    "question": {
+      "type": "image",
+      "content": "images/images70/15.png"
+    },
+    "answer": {
+      "type": "image",
+      "content": "images/images70/15-.png"
+    }
+  },
+  {
+    "question": {
+      "type": "image",
+      "content": "images/images70/16.png"
+    },
+    "answer": {
+      "type": "image",
+      "content": "images/images70/16-.png"
+    }
+  }
+]
