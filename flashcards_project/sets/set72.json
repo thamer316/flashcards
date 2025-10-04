@@ -1,0 +1,122 @@
+[
+  {
+    "question": {
+      "type": "image",
+      "content": "images/images72/1.png"
+    },
+    "answer": {
+      "type": "image",
+      "content": "images/images72/1-.png"
+    }
+  },
+  {
+    "question": {
+      "type": "image",
+      "content": "images/images72/2.png"
+    },
+    "answer": {
+      "type": "image",
+      "content": "images/images72/2-.png"
+    }
+  },
+  {
+    "question": {
+      "type": "image",
+      "content": "images/images72/3.png"
+    },
+    "answer": {
+      "type": "image",
+      "content": "images/images72/3-.png"
+    }
+  },
+  {
+    "question": {
+      "type": "image",
+      "content": "images/images72/4.png"
+    },
+    "answer": {
+      "type": "image",
+      "content": "images/images72/4-.png"
+    }
+  },
+  {
+    "question": {
+      "type": "image",
+      "content": "images/images72/5.png"
+    },
+    "answer": {
+      "type": "image",
+      "content": "images/images72/5-.png"
+    }
+  },
+  {
+    "question": {
+      "type": "image",
+      "content": "images/images72/6.png"
+    },
+    "answer": {
+      "type": "image",
+      "content": "images/images72/6-.png"
+    }
+  },
+  {
+    "question": {
+      "type": "image",
+      "content": "images/images72/7.png"
+    },
+    "answer": {
+      "type": "image",
+      "content": "images/images72/7-.png"
+    }
+  },
+  {
+    "question": {
+      "type": "image",
+      "content": "images/images72/8.png"
+    },
+    "answer": {
+      "type": "image",
+      "content": "images/images72/8-.png"
+    }
+  },
+  {
+    "question": {
+      "type": "image",
+      "content": "images/images72/9.png"
+    },
+    "answer": {
+      "type": "image",
+      "content": "images/images72/9-.png"
+    }
+  },
+  {
+    "question": {
+      "type": "image",
+      "content": "images/images72/10.png"
+    },
+    "answer": {
+      "type": "image",
+      "content": "images/images72/10-.png"
+    }
+  },
+  {
+    "question": {
+      "type": "image",
+      "content": "images/images72/11.png"
+    },
+    "answer": {
+      "type": "image",
+      "content": "images/images72/11-.png"
+    }
+  },
+  {
+    "question": {
+      "type": "image",
+      "content": "images/images72/12.png"
+    },
+    "answer": {
+      "type": "image",
+      "content": "images/images72/12-.png"
+    }
+  }
+]
