@@ -1,0 +1,72 @@
+[
+    {
+        "question": {
+            "type": "image",
+            "content": "images/images75/1.png"
+        },
+        "answer": {
+            "type": "image",
+            "content": "images/images75/1-.png"
+        }
+    },
+    {
+        "question": {
+            "type": "image",
+            "content": "images/images75/2.png"
+        },
+        "answer": {
+            "type": "image",
+            "content": "images/images75/2-.png"
+        }
+    },
+    {
+        "question": {
+            "type": "image",
+            "content": "images/images75/3.png"
+        },
+        "answer": {
+            "type": "image",
+            "content": "images/images75/3-.png"
+        }
+    },
+    {
+        "question": {
+            "type": "image",
+            "content": "images/images75/4.png"
+        },
+        "answer": {
+            "type": "image",
+            "content": "images/images75/4-.png"
+        }
+    },
+    {
+        "question": {
+            "type": "image",
+            "content": "images/images75/5.png"
+        },
+        "answer": {
+            "type": "image",
+            "content": "images/images75/5-.png"
+        }
+    },
+    {
+        "question": {
+            "type": "image",
+            "content": "images/images75/6.png"
+        },
+        "answer": {
+            "type": "image",
+            "content": "images/images75/6-.png"
+        }
+    },
+    {
+        "question": {
+            "type": "image",
+            "content": "images/images75/7.png"
+        },
+        "answer": {
+            "type": "image",
+            "content": "images/images75/7-.png"
+        }
+    }
+]
