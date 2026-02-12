@@ -1,122 +1,58 @@
 [
   {
-    "question": {
-      "type": "image",
-      "content": "images/images84/1.png"
-    },
-    "answer": {
-      "type": "image",
-      "content": "images/images84/1-.png"
-    }
+    "question": { "type": "image", "content": "images/images84/1.png" },
+    "answer": { "type": "image", "content": "images/images84/1-.png" }
   },
   {
-    "question": {
-      "type": "image",
-      "content": "images/images84/2.png"
-    },
-    "answer": {
-      "type": "image",
-      "content": "images/images84/2-.png"
-    }
+    "question": { "type": "image", "content": "images/images84/2.png" },
+    "answer": { "type": "image", "content": "images/images84/2-.png" }
   },
   {
-    "question": {
-      "type": "image",
-      "content": "images/images84/3.png"
-    },
-    "answer": {
-      "type": "image",
-      "content": "images/images84/3-.png"
-    }
+    "question": { "type": "image", "content": "images/images84/3.png" },
+    "answer": { "type": "image", "content": "images/images84/3-.png" }
   },
   {
-    "question": {
-      "type": "image",
-      "content": "images/images84/4.png"
-    },
-    "answer": {
-      "type": "image",
-      "content": "images/images84/4-.png"
-    }
+    "question": { "type": "image", "content": "images/images84/4.png" },
+    "answer": { "type": "image", "content": "images/images84/4-.png" }
   },
   {
-    "question": {
-      "type": "image",
-      "content": "images/images84/5.png"
-    },
-    "answer": {
-      "type": "image",
-      "content": "images/images84/5-.png"
-    }
+    "question": { "type": "image", "content": "images/images84/5.png" },
+    "answer": { "type": "image", "content": "images/images84/5-.png" }
   },
   {
-    "question": {
-      "type": "image",
-      "content": "images/images84/6.png"
-    },
-    "answer": {
-      "type": "image",
-      "content": "images/images84/6-.png"
-    }
+    "question": { "type": "image", "content": "images/images84/6.png" },
+    "answer": { "type": "image", "content": "images/images84/6-.png" }
   },
   {
-    "question": {
-      "type": "image",
-      "content": "images/images84/7.png"
-    },
-    "answer": {
-      "type": "image",
-      "content": "images/images84/7-.png"
-    }
+    "question": { "type": "image", "content": "images/images84/7.png" },
+    "answer": { "type": "image", "content": "images/images84/7-.png" }
   },
   {
-    "question": {
-      "type": "image",
-      "content": "images/images84/8.png"
-    },
-    "answer": {
-      "type": "image",
-      "content": "images/images84/8-.png"
-    }
+    "question": { "type": "image", "content": "images/images84/8.png" },
+    "answer": { "type": "image", "content": "images/images84/8-.png" }
   },
   {
-    "question": {
-      "type": "image",
-      "content": "images/images84/9.png"
-    },
-    "answer": {
-      "type": "image",
-      "content": "images/images84/9-.png"
-    }
+    "question": { "type": "image", "content": "images/images84/9.png" },
+    "answer": { "type": "image", "content": "images/images84/9-.png" }
   },
   {
-    "question": {
-      "type": "image",
-      "content": "images/images84/10.png"
-    },
-    "answer": {
-      "type": "image",
-      "content": "images/images84/10-.png"
-    }
+    "question": { "type": "image", "content": "images/images84/10.png" },
+    "answer": { "type": "image", "content": "images/images84/10-.png" }
   },
   {
-    "question": {
-      "type": "image",
-      "content": "images/images84/11.png"
-    },
-    "answer": {
-      "type": "image",
-      "content": "images/images84/11-.png"
-    }
+    "question": { "type": "image", "content": "images/images84/11.png" },
+    "answer": { "type": "image", "content": "images/images84/11-.png" }
   },
   {
-    "question": {
-      "type": "image",
-      "content": "images/images84/12.png"
-    },
-    "answer": {
-      "type": "image",
-      "content": "images/images84/12-.png"
-    }
+    "question": { "type": "image", "content": "images/images84/12.png" },
+    "answer": { "type": "image", "content": "images/images84/12-.png" }
+  },
+  {
+    "question": { "type": "image", "content": "images/images84/13.png" },
+    "answer": { "type": "image", "content": "images/images84/13-.png" }
+  },
+  {
+    "question": { "type": "image", "content": "images/images84/14.png" },
+    "answer": { "type": "image", "content": "images/images84/14-.png" }
   }
 ]
