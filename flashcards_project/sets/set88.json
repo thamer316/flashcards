@@ -1,0 +1,38 @@
+[
+  {
+    "question": { "type": "image", "content": "images/images88/1.jpg" },
+    "answer": { "type": "image", "content": "images/images88/1-.jpg" }
+  },
+  {
+    "question": { "type": "image", "content": "images/images88/2.jpg" },
+    "answer": { "type": "image", "content": "images/images88/2-.jpg" }
+  },
+  {
+    "question": { "type": "image", "content": "images/images88/3.jpg" },
+    "answer": { "type": "image", "content": "images/images88/3-.jpg" }
+  },
+  {
+    "question": { "type": "image", "content": "images/images88/4.jpg" },
+    "answer": { "type": "image", "content": "images/images88/4-.jpg" }
+  },
+  {
+    "question": { "type": "image", "content": "images/images88/5.jpg" },
+    "answer": { "type": "image", "content": "images/images88/5-.jpg" }
+  },
+  {
+    "question": { "type": "image", "content": "images/images88/6.jpg" },
+    "answer": { "type": "image", "content": "images/images88/6-.jpg" }
+  },
+  {
+    "question": { "type": "image", "content": "images/images88/7.jpg" },
+    "answer": { "type": "image", "content": "images/images88/7-.jpg" }
+  },
+  {
+    "question": { "type": "image", "content": "images/images88/8.jpg" },
+    "answer": { "type": "image", "content": "images/images88/8-.jpg" }
+  },
+  {
+    "question": { "type": "image", "content": "images/images88/9.jpg" },
+    "answer": { "type": "image", "content": "images/images88/9-.jpg" }
+  }
+]
