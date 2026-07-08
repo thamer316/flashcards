@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>عرض الصور</title>
+<style>
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  padding: 30px;
+  background: #ffffff;
+}
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 20px;
+  page-break-inside: avoid;
+}
+.row img {
+  display: block;
+  height: auto;
+  border-radius: 6px;
+}
+.full { width: 70%; }
+.small { width: 25%; }
+hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 20px 0;
+}
+@media print {
+  hr {
+    display: none;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="row">
+  <img class="small" src="3.png">
+  <img class="small" src="4.png">
+  <img class="small" src="5.png">
+</div>
+
+<hr>
+
+<div class="row">
+  <img class="small" src="6.png">
+  <img class="small" src="7.png">
+  <img class="small" src="8.png">
+</div>
+
+<hr>
+
+<div class="row">
+  <img class="small" src="9.png">
+  <img class="small" src="10.png">
+</div>
+
+<hr>
+
+<div class="row">
+  <img class="full" src="13-full.png">
+</div>
+
+</body>
+</html>

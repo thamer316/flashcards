@@ -92,6 +92,36 @@
       width: 100%;
     }
   }
+
+  .row {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 20px;
+    page-break-inside: avoid;
+  }
+
+  .row img {
+    display: block;
+    height: auto;
+    border-radius: 6px;
+  }
+
+  .row .full { width: 100%; }
+  .row .small { width: 30%; }
+
+  .row-divider {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
+  }
+
+  @media print {
+    .row-divider {
+      display: none;
+    }
+  }
 </style>
 </head>
 <body>
@@ -155,6 +185,27 @@
   <div class="page-block">
     <div class="page-title">صفحة 309</div>
     <img src="images/309.png" alt="صفحة 309">
+  </div>
+
+  <div class="row">
+    <img class="small" src="الصور/3.png">
+    <img class="small" src="الصور/4.png">
+    <img class="small" src="الصور/5.png">
+  </div>
+  <hr class="row-divider">
+  <div class="row">
+    <img class="small" src="الصور/6.png">
+    <img class="small" src="الصور/7.png">
+    <img class="small" src="الصور/8.png">
+  </div>
+  <hr class="row-divider">
+  <div class="row">
+    <img class="small" src="الصور/9.png">
+    <img class="small" src="الصور/10.png">
+  </div>
+  <hr class="row-divider">
+  <div class="row">
+    <img class="full" src="الصور/13-full.png">
   </div>
 
 </body>
