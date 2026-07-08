@@ -53,6 +53,29 @@
     height: auto;
   }
 
+  .img-wrap {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+  }
+
+  .img-wrap img.deleted {
+    opacity: 0.7;
+  }
+
+  .deleted-badge {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: red;
+    font-size: 56px;
+    font-weight: bold;
+    background: rgba(255,255,255,0.6);
+    padding: 5px 20px;
+    border-radius: 5px;
+  }
+
   @media (min-width: 769px) {
     .page-block {
       border: none;
@@ -101,6 +124,13 @@
   <div class="page-block">
     <div class="page-title">صفحة 118</div>
     <img src="images/118.png" alt="صفحة 118">
+  </div>
+  <div class="page-block">
+    <div class="page-title">صفحة 293</div>
+    <div class="img-wrap">
+      <img class="deleted" src="images/293.png" alt="صفحة 293">
+      <div class="deleted-badge">محذوف</div>
+    </div>
   </div>
 
 </body>
